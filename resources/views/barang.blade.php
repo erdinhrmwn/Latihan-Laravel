@@ -30,23 +30,17 @@
     <link href="{{ asset('css/table.css') }}" rel="stylesheet" media="all">
 </head>
 <style>
-    tr {
-        width: 100%;
-        display: inline-table;
-        table-layout: fixed;
-    }
-
-    table {
-        width: 100%;
-        height: 500px; // <-- Select the height of the table
-        display: -moz-groupbox; // Firefox Bad Effect
-    }
-
-    tbody {
+    table tbody {
+        display: block;
+        max-height: 450px;
         overflow-y: scroll;
-        height: 450px; //  <-- Select the height of the body
+    }
+
+    table thead,
+    table tbody tr {
+        display: table;
         width: 100%;
-        position: absolute;
+        table-layout: fixed;
     }
 
     td:first-child,
@@ -82,7 +76,7 @@
                         <tr class="table100-head">
                             <th>#</th>
                             <th>Nama Barang</th>
-                            <th style="width: 90px;">Stok</th>
+                            <th style="width: 80px;">Stok</th>
                             <th style="width: 110px;">Harga</th>
                             <th>Deskripsi</th>
                         </tr>
@@ -98,8 +92,8 @@
                         </tr>
                         @endforeach
                     </tbody>
-                    </table>
                     @endif
+                    </table>
                 </div>
             </div>
         </div>
