@@ -19,6 +19,10 @@ Route::post('/merk/store', 'MerkController@store');
 
 Route::get('/barang/view', 'BarangController@view');
 Route::get('/merk/view', 'MerkController@view');
+
+Route::get('/barang/delete/{id}', 'BarangController@destroy');
+Route::get('/merk/delete/{id}', 'MerkController@destroy');
+
 Route::get('/test', 'oneController@index');
 
 Route::get('/bukutamu/{id}&{nama}', function ($id, $nama) {

@@ -96,6 +96,7 @@ class MerkController extends Controller
      */
     public function destroy($id)
     {
-        //
+        DB::table('merek')->where('id_merek', $id)->delete();
+        return redirect('/merk/view');
     }
 }

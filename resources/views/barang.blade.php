@@ -60,6 +60,7 @@
                             <tr class="table100-head">
                                 <th>#</th>
                                 <th>Nama Merk</th>
+                                <th style="width: 140px;">Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -67,6 +68,7 @@
                             <tr>
                                 <td>{{ $k->id_merek }}</td>
                                 <td>{{ $k->nama_merek }}</td>
+                                <td style="width: 110px;"><a href="/merk/delete/{{ $k->id_merek }}">Delete</a></td>
                             </tr>
                             @endforeach
                         </tbody>
@@ -79,6 +81,7 @@
                             <th style="width: 80px;">Stok</th>
                             <th style="width: 110px;">Harga</th>
                             <th>Deskripsi</th>
+                            <th style="width: 140px;">Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -89,6 +92,7 @@
                             <td style="width: 100px;">{{ $k->stok }}</td>
                             <td style="width: 110px;">{{ $k->harga }}</td>
                             <td>{{ $k->deskripsi }}</td>
+                            <td style="width: 110px;"><a href="/barang/delete/{{ $k->id_barang }}">Delete</a></td>
                         </tr>
                         @endforeach
                     </tbody>
