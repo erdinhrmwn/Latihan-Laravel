@@ -19,9 +19,9 @@ class Barang extends Migration
             $table->integer('stok')->unsigned();
             $table->integer('harga')->unsigned();
             $table->text('deskripsi');
-            $table->integer('id_merek')->unsigned();
+            $table->integer('id_merek')->unsigned()->nullable();
             $table->foreign('id_merek')->references('id_merek')->on('merek')->onDelete('cascade');
-            $table->timestamp('created_at')->nullable();
+            $table->timestamp('created_at')->useCurrent();
         });
     }
 

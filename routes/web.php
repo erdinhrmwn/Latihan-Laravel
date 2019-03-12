@@ -14,6 +14,16 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/merk', 'MerkController@index');
+Route::post('/merk/store', 'MerkController@store');
+
+Route::get('/barang/view', 'BarangController@view');
+Route::get('/merk/view', 'MerkController@view');
+Route::get('/test', 'oneController@index');
+
+Route::get('/bukutamu/{id}&{nama}', function ($id, $nama) {
+    return 'Hello Tamu ke-' . $id . ' Nama mu : ' . $nama;
+});
 
 Auth::routes();
 

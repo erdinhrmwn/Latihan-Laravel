@@ -16,7 +16,7 @@ class Merek extends Migration
         Schema::create('merek', function (Blueprint $table) {
             $table->increments('id_merek');
             $table->string('nama_merek', 30);
-            $table->timestamp('created_at')->nullable();
+            $table->timestamp('created_at')->useCurrent();
         });
     }
 
