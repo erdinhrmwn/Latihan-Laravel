@@ -68,7 +68,7 @@
                             <tr>
                                 <td>{{ $k->id_merek }}</td>
                                 <td>{{ $k->nama_merek }}</td>
-                                <td style="width: 110px;"><a href="/merk/delete/{{ $k->id_merek }}">Delete</a></td>
+                                <td style="width: 110px;"><button type="submit" class="btn btn-danger"><a style="color:#fff;" href="/barang/delete/{{ $k->id_merek }}">Delete</a></button></td>
                             </tr>
                             @endforeach
                         </tbody>
@@ -92,7 +92,7 @@
                             <td style="width: 100px;">{{ $k->stok }}</td>
                             <td style="width: 110px;">{{ $k->harga }}</td>
                             <td>{{ $k->deskripsi }}</td>
-                            <td style="width: 110px;"><a href="/barang/delete/{{ $k->id_barang }}">Delete</a></td>
+                            <td style="width: 110px;"><button type="submit" class="btn btn-danger"><a style="color:#fff;" href="/barang/delete/{{ $k->id_barang }}">Delete</a></button></td>
                         </tr>
                         @endforeach
                     </tbody>
